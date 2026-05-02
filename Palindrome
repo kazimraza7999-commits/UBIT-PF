@@ -1,0 +1,23 @@
+package Ubit;
+
+import java.util.Scanner;
+
+public class palindrome {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String x = input.nextLine();
+
+        String rev="";
+
+        for (int i=x.length()-1;i>=0;i--){
+            rev += x.charAt(i);
+
+        }
+        if (x.equals(rev)) {
+            System.out.print("Palindrome");
+        }
+        else{
+                System.out.print("Not Palindrome");
+            }
+        }
+}
