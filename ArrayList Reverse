@@ -1,0 +1,19 @@
+package Ubit;
+
+import java.util.*;
+
+public class Arr {
+    static void main(String[] args) {
+        ArrayList<Integer> List1= new ArrayList<>(Arrays.asList(1,3,5,7));
+        int left=0;
+        int right=List1.size()-1;
+        while (left<right){
+            int temp=List1.get(left);
+            List1.set(left,List1.get(right));
+            List1.set(right,temp);
+            left++;
+            right--;
+        }
+        System.out.println("Reverse is: "+ List1);
+    }
+}
