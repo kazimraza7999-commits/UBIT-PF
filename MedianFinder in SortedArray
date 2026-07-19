@@ -1,0 +1,21 @@
+package Practice;
+
+public class MedianFinder {
+    static void main(String[] args) {
+        int ar1[]={1,2,3,4};
+        int ar2[]={1,2,3};
+        System.out.println("Median is = "+ medianfinder(ar1));
+        System.out.println("Median is = "+ medianfinder(ar2));
+    }
+
+    private static double medianfinder(int[] ar) {
+        int n= ar.length;
+        if(n%2==0){
+           int middle1=ar[(n/2)-1];
+           int middle2=ar[(n/2)];
+           return (middle1+middle2)/2.0;
+        } else {
+            return ar[n/2];
+        }
+    }
+}
