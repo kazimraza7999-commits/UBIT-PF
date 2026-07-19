@@ -1,0 +1,26 @@
+package Practice;
+
+public class Arrowkeys {
+    public static Boolean arrowsmoves(String moves){
+        int x=0;
+        int y=0;
+        for( int i=0 ; i<moves.length() ; i++ ){
+            char c = moves.charAt(i);
+            if(c == 'U'){
+                y++;
+            } else if (c == 'D') {
+                y--;
+            } else if (c == 'L') {
+                x--;
+            } else if (c == 'R') {
+                x++;
+            }
+        }
+        return x==0 && y==0;
+    }
+    static void main(String[] args) {
+        String moves ="UDLU";
+        boolean result = arrowsmoves(moves);
+        System.out.println(result);
+    }
+}
