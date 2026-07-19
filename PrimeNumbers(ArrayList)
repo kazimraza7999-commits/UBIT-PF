@@ -1,0 +1,30 @@
+package Practice;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PrimeNumbers {
+    static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        ArrayList<Integer>Answer = primenumrange(n);
+        System.out.println(Answer);
+    }
+
+    private static ArrayList<Integer> primenumrange(int n) {
+        ArrayList<Integer>Nums = new ArrayList<>();
+        for ( int i=2 ; i<n ; i++){
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                Nums.add(i);
+            }
+        }
+        return Nums;
+    }
+}
